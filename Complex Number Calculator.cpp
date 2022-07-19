@@ -3,7 +3,8 @@
 #include <complex>
 #include <iostream>
 using namespace std;
-class com {
+class com 
+{
 	// private variable declarations
 	double reall, img;
 
@@ -83,6 +84,7 @@ public:
 		// return real part
 		return ((*this).reall);
 	}
+	
 	// Declare inside com class and
 	// show Imaginary part of complex number
 	double get_img()
@@ -91,6 +93,7 @@ public:
 		return ((*this).img);
 	}
 };
+
 // Display Entered Complex Number
 void com::display()
 {
@@ -108,6 +111,7 @@ void com::display()
 		cout << reall << "-i" << (-1) * img << endl;
 	}
 }
+
 // Add two user entered complex number
 com com::operator+(com o2)
 {
@@ -125,6 +129,7 @@ com com::operator+(com o2)
 	// return temporary variable to function
 	return temp;
 }
+
 // Subtract two user entered complex number
 com com::operator-(com o2)
 {
@@ -142,6 +147,7 @@ com com::operator-(com o2)
 	// return temporary variable to function
 	return temp;
 }
+
 // Multiply two user entered complex number
 com com::operator*(com o2)
 {
@@ -162,6 +168,7 @@ com com::operator*(com o2)
 	// return temporary variable to function
 	return temp;
 }
+
 // Divide two user entered complex number
 com com::operator/(com o2)
 {
@@ -188,6 +195,7 @@ com com::operator/(com o2)
 	// return temporary variable to function
 	return temp;
 }
+
 // find conjugate of both complex numbers
 com com::operator~(void)
 {
@@ -204,6 +212,7 @@ com com::operator~(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // find sine value of both complex numbers
 com com::sin_value(void)
 {
@@ -225,6 +234,7 @@ com com::sin_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // find cosine value of both complex numbers
 com com::cos_value(void)
 {
@@ -246,6 +256,7 @@ com com::cos_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // find tangent value of both complex numbers
 com com::tan_value(void)
 {
@@ -267,6 +278,7 @@ com com::tan_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // find sine hyperbolic value of both complex numbers
 com com::sinh_value(void)
 {
@@ -289,6 +301,7 @@ com com::sinh_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // find cosine hyperbolic value of both complex numbers
 com com::cosh_value(void)
 {
@@ -311,6 +324,7 @@ com com::cosh_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // it find tangent hyperbolic value of both complex numbers
 com com::tanh_value(void)
 {
@@ -333,6 +347,7 @@ com com::tanh_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // it find natural log value of both complex numbers
 com com::log_value(void)
 {
@@ -355,6 +370,7 @@ com com::log_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // it find Norm of both complex numbers
 com com::norm_value(void)
 {
@@ -376,6 +392,7 @@ com com::norm_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // it find Absolute of both complex numbers
 com com::abs_value(void)
 {
@@ -397,6 +414,7 @@ com com::abs_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // it find Argument of both complex numbers
 com com::arg_value(void)
 {
@@ -418,6 +436,7 @@ com com::arg_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // it find power of both complex numbers
 com com::power_value(void)
 {
@@ -446,6 +465,7 @@ com com::power_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // it find exponential of both complex numbers
 com com::exp_value(void)
 {
@@ -467,6 +487,7 @@ com com::exp_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 // it find Square root of both complex numbers
 com com::sqrt_value(void)
 {
@@ -488,10 +509,10 @@ com com::sqrt_value(void)
 	// return temporary variable to function
 	return temp;
 }
+
 int main()
 {
-	cout << "**********************Operations On Complex "
-			"Number***************************";
+	cout << "**********************Operations On Complex Number***************************";
 
 	// Declare o1,o2 and o3 variable of class name data type
 	com o1, o2, o3;
