@@ -96,13 +96,15 @@ void com::display()
 {
 	// if imaginary part is positive then
 	// it display real + i img complex number
-	if (img >= 0) {
+	if (img >= 0) 
+	{
 		cout << reall << "+i" << img << endl;
 	}
 
 	// if imaginary part is negative then
 	// it display real - i img complex number
-	else {
+	else 
+	{
 		cout << reall << "-i" << (-1) * img << endl;
 	}
 }
@@ -167,7 +169,7 @@ com com::operator/(com o2)
 	// variable of class data type
 	com o, num, den, temp;
 
-	// call conjugate function and perfor conjugate
+	// call conjugate function and perform conjugate
 	// operation
 	o = ~o2;
 
