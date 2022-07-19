@@ -2,7 +2,8 @@
 using namespace std;
 
 // Node Class
-class Node {
+class Node 
+{
 public:
 	int roll;
 	string Name;
@@ -26,7 +27,8 @@ bool check(int x)
 	t = head;
 
 	// Traverse the Linked List
-	while (t != NULL) {
+	while (t != NULL) 
+	{
 		if (t->roll == x)
 			return true;
 		t = t->next;
@@ -36,11 +38,11 @@ bool check(int x)
 }
 
 // Function to insert the record
-void Insert_Record(int roll, string Name,
-				string Dept, int Marks)
+void Insert_Record(int roll, string Name, string Dept, int Marks)
 {
 	// if Record Already Exist
-	if (check(roll)) {
+	if (check(roll)) 
+	{
 		cout << "Student with this "
 			<< "record Already Exists\n";
 		return;
@@ -55,17 +57,19 @@ void Insert_Record(int roll, string Name,
 	t->next = NULL;
 
 	// Insert at Begin
-	if (head == NULL
-		|| (head->roll >= t->roll)) {
+	if (head == NULL || (head->roll >= t->roll)) 
+	{
 		t->next = head;
 		head = t;
 	}
 
 	// Insert at middle or End
-	else {
+	else 
+	{
 		Node* c = head;
 		while (c->next != NULL
-			&& c->next->roll < t->roll) {
+			&& c->next->roll < t->roll) 
+		{
 			c = c->next;
 		}
 		t->next = c->next;
@@ -81,7 +85,8 @@ void Insert_Record(int roll, string Name,
 void Search_Record(int roll)
 {
 	// if head is NULL
-	if (!head) {
+	if (!head) 
+	{
 		cout << "No such Record "
 			<< "Available\n";
 		return;
@@ -91,7 +96,8 @@ void Search_Record(int roll)
 	else {
 		Node* p = head;
 		while (p) {
-			if (p->roll == roll) {
+			if (p->roll == roll) 
+			{
 				cout << "Roll Number\t"
 					<< p->roll << endl;
 				cout << "Name\t\t"
@@ -121,7 +127,8 @@ int Delete_Record(int roll)
 
 	// Deletion at Begin
 	if (t != NULL
-		&& t->roll == roll) {
+		&& t->roll == roll) 
+	{
 		head = t->next;
 		delete t;
 
@@ -131,11 +138,13 @@ int Delete_Record(int roll)
 	}
 
 	// Deletion Other than Begin
-	while (t != NULL && t->roll != roll) {
+	while (t != NULL && t->roll != roll) 
+	{
 		p = t;
 		t = t->next;
 	}
-	if (t == NULL) {
+	if (t == NULL) 
+	{
 		cout << "Record does not Exist\n";
 		return -1;
 		p->next = t->next;
@@ -153,11 +162,13 @@ int Delete_Record(int roll)
 void Show_Record()
 {
 	Node* p = head;
-	if (p == NULL) {
+	if (p == NULL) 
+	{
 		cout << "No Record "
 			<< "Available\n";
 	}
-	else {
+	else 
+	{
 		cout << "Index\tName\tCourse"
 			<< "\tMarks\n";
 
@@ -180,7 +191,8 @@ int main()
 	int Roll, Marks;
 
 	// Menu-driven program
-	while (true) {
+	while (true) 
+	{
 		cout << "\n\t\tWelcome to Student Record "
 				"Management System\n\n\tPress\n\t1 to "
 				"create a new Record\n\t2 to delete a "
@@ -192,7 +204,8 @@ int main()
 
 		// Enter Choice
 		cin >> Choice;
-		if (Choice == 1) {
+		if (Choice == 1) 
+		{
 			cout << "Enter Name of Student\n";
 			cin >> Name;
 			cout << "Enter Roll Number of Student\n";
@@ -203,25 +216,30 @@ int main()
 			cin >> Marks;
 			Insert_Record(Roll, Name, Course, Marks);
 		}
-		else if (Choice == 2) {
+		else if (Choice == 2) 
+		{
 			cout << "Enter Roll Number of Student whose "
 					"record is to be deleted\n";
 			cin >> Roll;
 			Delete_Record(Roll);
 		}
-		else if (Choice == 3) {
+		else if (Choice == 3) 
+		{
 			cout << "Enter Roll Number of Student whose "
 					"record you want to Search\n";
 			cin >> Roll;
 			Search_Record(Roll);
 		}
-		else if (Choice == 4) {
+		else if (Choice == 4) 
+		{
 			Show_Record();
 		}
-		else if (Choice == 5) {
+		else if (Choice == 5) 
+		{
 			exit(0);
 		}
-		else {
+		else 
+		{
 			cout << "Invalid Choice "
 				<< "Try Again\n";
 		}
