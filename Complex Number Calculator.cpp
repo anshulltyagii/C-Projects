@@ -734,8 +734,7 @@ int main()
 			cout << "Square root of 1st Complex Number is : \n";
 			o3 = o1.sqrt_value();
 			o3.display();
-			cout << "Square root of 2nd Complex Number is "
-					": \n";
+			cout << "Square root of 2nd Complex Number is : \n";
 			o3 = o2.sqrt_value();
 			o3.display();
 			break;
