@@ -499,7 +499,7 @@ int main()
 	// declare choice variable of integer type
 	int choice;
 	do {
-		// Enter you choice to perform operation
+		// Enter your choice to perform operation
 		cout << "\nEnter Choice\n\n";
 		cout << "1.Read Complex Number\n\n";
 		cout << "2.Display Complex Number\n\n";
@@ -512,10 +512,8 @@ int main()
 		cout << "9.Cosine of Complex Number\n\n";
 		cout << "10.Tangent of Complex Number\n\n";
 		cout << "11.Sine Hyperbolic of Complex Number\n\n";
-		cout
-			<< "12.Cosine Hyperbolic of Complex Number\n\n";
-		cout << "13.Tangent Hyperbolic of Complex "
-				"Number\n\n";
+		cout << "12.Cosine Hyperbolic of Complex Number\n\n";
+		cout << "13.Tangent Hyperbolic of Complex Number\n\n";
 		cout << "14.Natural Log of Complex Number\n\n";
 		cout << "15.Norm of Complex Number\n\n";
 		cout << "16.Absolute of Complex Number\n\n";
@@ -524,14 +522,14 @@ int main()
 		cout << "19.Exponential of Complex Number\n\n";
 		cout << "20.Square Root of Complex Number\n\n";
 		cout << "21.Show Real Values of Complex Number\n\n";
-		cout << "22.Show Imaginary Values of Complex "
-				"Number\n\n";
+		cout << "22.Show Imaginary Values of Complex Number\n\n";
 		cout << "23.Exit\n\n";
 		cin >> choice;
 		cout << "\n";
 
 		// use switch case according to user input
-		switch (choice) {
+		switch (choice) 
+		{
 		case 1:
 			// Enter value of complex number
 			cout << "Enter Values: \n";
@@ -702,20 +700,17 @@ int main()
 		case 19:
 			// call exp_value() function to Find exponential
 			// of complex number
-			cout << "Exponential of 1st Complex Number is "
-					": \n";
+			cout << "Exponential of 1st Complex Number is : \n";
 			o3 = o1.exp_value();
 			o3.display();
-			cout << "Exponential of 2nd Complex Number is "
-					": \n";
+			cout << "Exponential of 2nd Complex Number is : \n";
 			o3 = o2.exp_value();
 			o3.display();
 			break;
 		case 20:
 			// call sqrt_value() function to Find Square root
 			// of complex number
-			cout << "Square root of 1st Complex Number is "
-					": \n";
+			cout << "Square root of 1st Complex Number is : \n";
 			o3 = o1.sqrt_value();
 			o3.display();
 			cout << "Square root of 2nd Complex Number is "
@@ -734,11 +729,9 @@ int main()
 		case 22:
 			// call get_img() function to get imaginary part
 			// of complex number
-			cout << "Imaginary Value of 1st Complex Number "
-					"is: "
+			cout << "Imaginary Value of 1st Complex Number is: "
 				<< o1.get_img() << endl;
-			cout << "Imaginary Value of 2nd Complex Number "
-					"is: "
+			cout << "Imaginary Value of 2nd Complex Number is: "
 				<< o2.get_img() << endl;
 			break;
 		case 23:
