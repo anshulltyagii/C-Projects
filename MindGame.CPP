@@ -1,5 +1,5 @@
 # include<iostream>
-# include <conio.h>
+# include<conio.h>
 #include<stdlib.h>
 #include<process.h>
 #include<ctype.h>
